@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Modal, Button } from 'antd';
-import { shuffle, map, get, size, first, last } from 'lodash';
+import { shuffle, map, get, size, first } from 'lodash';
 import fetch from 'isomorphic-unfetch';
 import Card from '../components/Card';
 import Header from '../components/Header';
@@ -10,7 +10,7 @@ import TopPlayerModal from '../components/TopPlayerModal';
 import './index.scss';
 
 const CARD_VALUES = [
-  1, 1, 2, 2
+  1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6
 ];
 
 interface CardProps {
@@ -175,7 +175,7 @@ export class IndexPage extends React.Component<{}, IndexPageState> {
               clicked: prevState.clicked + 1,
               matchedCardAmount: prevState.matchedCardAmount + 2
             }), () => {
-              if (this.state.matchedCardAmount >= 4) {
+              if (this.state.matchedCardAmount === size(CARD_VALUES)) {
                 this.handleSubmit();
               }
             }), 1000);
