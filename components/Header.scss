@@ -1,0 +1,68 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+.HeaderContainer {
+  padding: 20px;
+  text-align: center;
+  background-color: $primary-color;
+  color: white;
+  min-height: 100px;
+  @include desktop {
+    padding: 30px 70px;
+    min-height: 120px;
+    border-radius: 0 0 10px 10px;
+  }
+  .description {
+    font-size: 4vw;
+    margin-bottom: 5px;
+    @include desktop {
+      font-size: 20px;
+    }
+  }
+  .value {
+    font-size: 22px;
+    @include desktop {
+      font-size: 25px;
+    }
+  }
+  .buttonContainer {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    .restartButton {
+      &:focus, &:hover {
+        opacity: 1.0;
+      }
+      margin: 5px 0;
+      width: 40%;
+      border: white 1px solid;
+      padding: 5px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 4vw;
+      @include desktop {
+        width: 25%;
+        font-size: 18px;
+      }
+    }
+    .topRankingButton {
+      &:focus, &:hover {
+        opacity: 1.0;
+      }
+      margin: 5px 0;
+      width: 40%;
+      color: $primary-color;
+      background-color: white;
+      border: $primary-color 1px solid;
+      padding: 5px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 4vw;
+      @include desktop {
+        font-size: 18px;
+        width: 40%;
+      }
+    }
+  }
+}

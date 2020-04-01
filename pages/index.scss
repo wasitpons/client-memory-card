@@ -1,0 +1,17 @@
+@import '../styles/mixins';
+
+.container {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  padding: 5%;
+  .card {
+    width: 16%;
+    @include mobile {
+      width: 33%;
+    }
+    @include tablet {
+      width: 25%;
+    }
+  }
+}

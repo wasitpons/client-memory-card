@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  client:
+    build: .
+    restart: unless-stopped
+    command: bash -c 'npm install && npm run dev'
+    ports:
+      - "3000:3000"
+      - "9300:9300"
+    volumes:
+      - "./pages:/usr/src/app/pages"
+      - "./components:/usr/src/app/components"
+      - "./package.json:/usr/src/app/package.json"
+      - "./package-lock.json:/usr/src/app/package-lock.json"
