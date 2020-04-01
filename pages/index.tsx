@@ -198,12 +198,14 @@ export class IndexPage extends React.Component<{}, IndexPageState> {
     return (
       <>
         <SuccessModal
+          key="successModal"
           clicked={this.state.clicked}
           visible={this.state.successModalVisible}
           onClose={this.handleSuccessModalConfirm}
           onRestart={this.handleRestart}
         />
         <TopPlayerModal
+          key="topPlayerModal"
           visible={this.state.topPlayerVisible}
           onClose={this.handleTopPlayerModalConfirm}
           ranking={this.state.topPlayerRanking}

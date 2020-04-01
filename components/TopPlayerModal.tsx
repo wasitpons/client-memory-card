@@ -53,7 +53,7 @@ const TopPlyerModal: FunctionComponent<TopPlayerModalProps> = ({
       onOk={onClose}
       onCancel={onClose}
       footer={[
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div key="back" style={{ display: 'flex', justifyContent: 'center' }}>
           <Button key="back" onClick={onClose} type="primary">
             Ok
           </Button>,

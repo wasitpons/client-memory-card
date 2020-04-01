@@ -20,7 +20,7 @@ const SuccessModal: FunctionComponent<SuccessModalProps> = ({
     onOk={onClose}
     onCancel={onClose}
     footer={[
-      <div style={{ display: 'flex', justifyContent: 'center'}}>
+      <div key="buttonContainer" style={{ display: 'flex', justifyContent: 'center'}}>
         <Button key="back" onClick={onClose}>
           Return
         </Button>,
